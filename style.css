@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
+/* Responsive breakpoints omitted — project delivered as desktop screenshots */
+
 /* ── RESET & BASE ── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -9,8 +11,6 @@
   --blue:   #3b82f6;
   --bg:     #05050f;
   --text:   rgba(255,255,255,.85);
-  --muted:  rgba(255,255,255,.35);
-  --border: rgba(255,255,255,.07);
 }
 
 html {
@@ -48,7 +48,7 @@ nav {
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 48px; height: 60px;
   border-bottom: 1px solid rgba(255,255,255,.06);
-  background: rgba(5,5,15,.7); backdrop-filter: blur(20px);
+  background: rgba(5,5,15,.7); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
 }
 
 .nav-logo {
@@ -144,7 +144,7 @@ nav {
 .dashboard {
   width: 100%; border-radius: 14px; overflow: hidden;
   border: 1px solid rgba(255,255,255,.1);
-  background: rgba(10,10,25,.8); backdrop-filter: blur(12px);
+  background: rgba(10,10,25,.8); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
   box-shadow: 0 40px 120px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.06);
 }
 
