@@ -353,3 +353,5 @@ footer {
 .reveal-d3 { transition-delay: .3s; }
 .reveal-d4 { transition-delay: .4s; }
 .reveal-d5 { transition-delay: .5s; }
+
+.footer-addr { font-size: 13px; color: rgba(255,255,255,.28); }
