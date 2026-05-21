@@ -177,6 +177,7 @@ nav.nav-scrolled {
 .dashboard-wrap {
   position: relative; width: 100%; max-width: 900px;
   border-radius: 16px; overflow: visible;
+  animation: fade-up .8s ease .7s both;
 }
 
 .dashboard-glow {
@@ -190,6 +191,7 @@ nav.nav-scrolled {
   border: 1px solid rgba(255,255,255,.1);
   background: rgba(10,10,25,.8); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
   box-shadow: 0 40px 120px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.06);
+  animation: float 6s ease-in-out 1.5s infinite;
 }
 
 .dash-header {
