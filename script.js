@@ -11,20 +11,13 @@
 (function () {
   const toast = document.getElementById('toast');
   if (!toast) return;
-  document.querySelectorAll('.nav-fake').forEach(link => {
+  let timer;
+  document.querySelectorAll('.nav-fake, .footer-fake').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
       toast.classList.add('toast-show');
-      clearTimeout(toast._timer);
-      toast._timer = setTimeout(() => toast.classList.remove('toast-show'), 2600);
-    });
-  });
-  document.querySelectorAll('.footer-fake').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      toast.classList.add('toast-show');
-      clearTimeout(toast._timer);
-      toast._timer = setTimeout(() => toast.classList.remove('toast-show'), 2600);
+      clearTimeout(timer);
+      timer = setTimeout(() => toast.classList.remove('toast-show'), 2600);
     });
   });
 })();
@@ -46,7 +39,7 @@
 (function () {
   const items = document.querySelectorAll('.testimonial-item');
   const dots  = document.querySelectorAll('.carousel-dot');
-  if (!items.length) return;
+  if (!items.length || dots.length !== items.length) return;
   let current = 0;
   let timer;
 
