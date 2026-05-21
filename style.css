@@ -387,7 +387,7 @@ nav.nav-scrolled {
 .bento-card.visible .bento-progress-fill { width: var(--progress); }
 
 /* ── HOW IT WORKS ── */
-.hiw {
+.hiw-section {
   position: relative; z-index: 1;
   padding: 100px 48px;
 }
@@ -419,7 +419,7 @@ nav.nav-scrolled {
   transform: translateY(-4px);
 }
 
-.hiw-step-num {
+.hiw-number {
   width: 52px; height: 52px; border-radius: 50%;
   background: rgba(139,92,246,.1); border: 1px solid rgba(139,92,246,.3);
   display: flex; align-items: center; justify-content: center;
@@ -428,12 +428,12 @@ nav.nav-scrolled {
   margin-bottom: 20px; position: relative; z-index: 1;
 }
 
-.hiw-step-title {
+.hiw-title {
   font-size: 15px; font-weight: 700; color: rgba(255,255,255,.85);
   margin-bottom: 10px; font-family: 'Syne', sans-serif;
 }
 
-.hiw-step-desc {
+.hiw-desc {
   font-size: 13px; color: rgba(255,255,255,.32); line-height: 1.75;
 }
 
@@ -492,18 +492,18 @@ nav.nav-scrolled {
   font-size: 12px; color: rgba(255,255,255,.28);
 }
 
-.testimonial-dots {
+.carousel-dots {
   display: flex; justify-content: center; gap: 8px;
   margin-top: 32px;
 }
 
-.t-dot {
+.carousel-dot {
   width: 7px; height: 7px; border-radius: 50%;
   background: rgba(255,255,255,.15);
   border: none; cursor: pointer; padding: 0;
   transition: background .2s, transform .2s;
 }
-.t-dot.active { background: var(--purple); transform: scale(1.25); }
+.carousel-dot.active { background: var(--purple); transform: scale(1.25); }
 
 /* ── IMPRESSUM CONTENT ── */
 .page-content {
@@ -545,7 +545,7 @@ nav.nav-scrolled {
 }
 
 /* ── CTA BANNER ── */
-.cta-banner {
+.cta-section {
   position: relative; z-index: 1;
   padding: 100px 48px;
 }
