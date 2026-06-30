@@ -1,0 +1,405 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout title="PartsCloud: Das Betriebssystem für Ihr Ersatzteilgeschäft">
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-badge">KI-gestützte Ersatzteilplanung</div>
+    <h1 class="hero-h1">
+      Das <span class="grad">Betriebssystem</span> für Ihr Ersatzteilgeschäft
+    </h1>
+    <p class="hero-desc">
+      PartsCloud verbindet sich nativ mit Ihrem ERP und analysiert Bestände, Nachfragemuster
+      und Lieferzeiten per KI, für präzise Bestellvorschläge, die Fehlteile verhindern und
+      Kapital freisetzen.
+    </p>
+    <div class="hero-kickers">Weniger Fehlteile · Weniger Überbestand · Mehr Service-Umsatz</div>
+    <div class="hero-btns">
+      <a href={`${base}/kontakt`} class="btn-primary">Demo anfragen</a>
+      <a href={`${base}/service-after-sales`} class="btn-ghost">Mehr erfahren →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-val p">98,4 %</div>
+        <div class="stat-lbl">Teilverfügbarkeit</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val g">−23 %</div>
+        <div class="stat-lbl">Gebundenes Kapital</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val b">91 %</div>
+        <div class="stat-lbl">Forecast-Genauigkeit</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val w">20+</div>
+        <div class="stat-lbl">ERP-Integrationen</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LOGOS TICKER ── -->
+  <div class="logos-band">
+    <p class="logos-label">Vertrauen von führenden Maschinenbauern</p>
+    <div class="ticker-outer">
+      <div class="ticker-track">
+        <div class="ticker-group">
+          <span>Hymmen</span><span>Weinig AG</span><span>Fischer Tiretech</span>
+          <span>Eucorail</span><span>Coperion</span><span>Haver &amp; Boecker</span>
+          <span>Krones AG</span><span>Festo</span><span>Voith</span><span>Grenzebach</span>
+        </div>
+        <div class="ticker-group" aria-hidden="true">
+          <span>Hymmen</span><span>Weinig AG</span><span>Fischer Tiretech</span>
+          <span>Eucorail</span><span>Coperion</span><span>Haver &amp; Boecker</span>
+          <span>Krones AG</span><span>Festo</span><span>Voith</span><span>Grenzebach</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FEATURES BENTO ── -->
+  <section class="s s--features">
+    <div class="s-inner">
+      <div class="s-header reveal">
+        <div class="s-eyebrow">Funktionen</div>
+        <h2 class="s-title">Alles was Sie brauchen, nichts was Sie nicht brauchen</h2>
+      </div>
+      <div class="bento">
+        <div class="bc bc--a reveal" data-delay="1">
+          <div class="bc-icon p" aria-hidden="true">◈</div>
+          <div class="bc-title">KI-Bestellvorschläge</div>
+          <div class="bc-desc">Automatische, SKU-genaue Bestellvorschläge, wöchentlich generiert und priorisiert nach Gewinnrisiko. Kein Excel, keine Bauchentscheidungen.</div>
+          <div class="spark" aria-hidden="true">
+            <span style="height:28%"></span><span style="height:45%"></span><span style="height:36%"></span>
+            <span style="height:65%"></span><span style="height:50%"></span><span style="height:82%"></span>
+            <span style="height:60%"></span><span style="height:88%"></span><span style="height:72%"></span>
+            <span style="height:100%"></span>
+          </div>
+        </div>
+        <div class="bc bc--b reveal" data-delay="2">
+          <div class="bc-icon g" aria-hidden="true">⊕</div>
+          <div class="bc-title">ERP-nativ</div>
+          <div class="bc-desc">Direkte Integration in SAP, Microsoft Dynamics, proALPHA und 20+ weitere Systeme. Kein separates IT-Projekt, keine Datenmigration.</div>
+        </div>
+        <div class="bc bc--c reveal" data-delay="1">
+          <div class="bc-icon b" aria-hidden="true">◎</div>
+          <div class="bc-title">Proaktive Planung</div>
+          <div class="bc-desc">Wissen, was Kunden morgen brauchen, liefern, bevor der Druck entsteht.</div>
+        </div>
+        <div class="bc bc--d reveal" data-delay="2">
+          <div class="bc-icon w" aria-hidden="true">◇</div>
+          <div class="bc-title">Echtzeit-Reporting</div>
+          <div class="bc-desc">Live-Dashboards für Verfügbarkeit, Umschlag und Service-Level, immer aktuell.</div>
+        </div>
+        <div class="bc bc--e reveal" data-delay="3">
+          <div class="bc-icon g" aria-hidden="true">▲</div>
+          <div class="bc-title">Bestandsoptimierung</div>
+          <div class="bc-desc">Ø 23 % weniger gebundenes Kapital bei gleichzeitig höherer Teilverfügbarkeit.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ── -->
+  <section class="s s--hiw">
+    <div class="s-inner">
+      <div class="s-header reveal">
+        <div class="s-eyebrow">So funktioniert es</div>
+        <h2 class="s-title">In drei Schritten zur intelligenten Planung</h2>
+      </div>
+      <div class="hiw-grid">
+        <div class="hiw-connector" aria-hidden="true"></div>
+        <div class="hiw-card reveal" data-delay="1">
+          <div class="hiw-num">01</div>
+          <div class="hiw-title">ERP verbinden</div>
+          <div class="hiw-desc">Direkte Integration in Ihr bestehendes System in wenigen Tagen. Kein IT-Projekt, keine Datenmigration.</div>
+        </div>
+        <div class="hiw-card reveal" data-delay="2">
+          <div class="hiw-num">02</div>
+          <div class="hiw-title">KI analysiert</div>
+          <div class="hiw-desc">Das Modell lernt Ihre Nachfragemuster, Saisonalitäten und Lieferzeiten, vollautomatisch.</div>
+        </div>
+        <div class="hiw-card reveal" data-delay="3">
+          <div class="hiw-num">03</div>
+          <div class="hiw-title">Vorschläge erhalten</div>
+          <div class="hiw-desc">Wöchentliche, priorisierte Bestellvorschläge, SKU-genau, sofort umsetzbar, direkt im ERP.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SOCIAL PROOF ── -->
+  <section class="s s--social">
+    <div class="s-inner">
+      <div class="s-header reveal">
+        <div class="s-eyebrow">Kundenstimmen</div>
+        <h2 class="s-title">Was unsere Kunden sagen</h2>
+      </div>
+      <div class="social-grid">
+        <div class="quote-card quote-card--featured reveal">
+          <span class="q-mark" aria-hidden="true">"</span>
+          <p class="q-text">Mit PartsCloud haben wir endlich datengetriebene Sicherheit in der Ersatzteilplanung erreicht. Was früher reaktiv und manuell war, ist heute proaktiv, automatisiert und voll unter Kontrolle.</p>
+          <div class="q-author">
+            <div class="q-avatar" aria-hidden="true">MA</div>
+            <div>
+              <div class="q-name">Michel Ahring</div>
+              <div class="q-role">Head of Division Service · Hymmen GmbH</div>
+            </div>
+          </div>
+        </div>
+        <div class="quote-card reveal" data-delay="1">
+          <span class="q-mark" aria-hidden="true">"</span>
+          <p class="q-text">Die Integration in unser ERP war in wenigen Tagen erledigt. Keine langen Projekte, kein Overhead, einfach Ergebnis.</p>
+          <div class="q-author">
+            <div class="q-avatar" aria-hidden="true">TK</div>
+            <div>
+              <div class="q-name">Thomas Klein</div>
+              <div class="q-role">Head of Procurement · Weinig AG</div>
+            </div>
+          </div>
+        </div>
+        <div class="quote-card reveal" data-delay="2">
+          <span class="q-mark" aria-hidden="true">"</span>
+          <p class="q-text">Unsere Teilverfügbarkeit ist auf 98,4 % gestiegen. Das war früher ohne massiv mehr Kapital zu binden undenkbar.</p>
+          <div class="q-author">
+            <div class="q-avatar" aria-hidden="true">SF</div>
+            <div>
+              <div class="q-name">Sandra Fröhlich</div>
+              <div class="q-role">VP Service · Coperion</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section class="s s--cta">
+    <div class="s-inner">
+      <div class="cta-card reveal">
+        <div class="cta-eyebrow">Jetzt starten</div>
+        <h2 class="cta-h2">Bereit, Ihr Ersatzteilgeschäft<br />zu transformieren?</h2>
+        <p class="cta-sub">Ohne IT-Projekt. Ohne Risiko. Live in Wochen.</p>
+        <div class="cta-btns">
+          <a href={`${base}/kontakt`} class="btn-primary">Demo anfragen</a>
+          <a href={`${base}/service-after-sales`} class="btn-ghost">Funktionen entdecken →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+/* ── HERO ── */
+.hero {
+  position: relative; z-index: 1;
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  padding: calc(68px + var(--s10)) var(--s6) var(--s9);
+}
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: var(--s1);
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--text-3); padding: 5px 14px; border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.035);
+  margin-bottom: var(--s4);
+  opacity: 0; animation: reveal-up 0.6s 0.1s ease forwards;
+}
+.hero-badge::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--purple-l);
+}
+
+.hero-h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(30px, 4.2vw, 56px);
+  font-weight: 800; letter-spacing: -1.5px; line-height: 1.08;
+  margin-bottom: var(--s3); max-width: 860px; color: var(--text-1);
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  opacity: 0; animation: reveal-up 0.65s 0.22s ease forwards;
+}
+.hero-h1 .grad {
+  background: linear-gradient(120deg, #c4b5fd 0%, var(--green-l) 50%, var(--blue-l) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; background-size: 200%;
+  animation: gradpan 8s ease infinite;
+}
+@keyframes gradpan {
+  0%, 100% { background-position: 0%; }
+  50%       { background-position: 100%; }
+}
+
+.hero-desc {
+  font-size: 14.5px; line-height: 1.72; color: var(--text-2);
+  max-width: 520px; margin-bottom: var(--s3);
+  opacity: 0; animation: reveal-up 0.65s 0.36s ease forwards;
+}
+.hero-kickers {
+  display: flex; align-items: center; gap: var(--s3);
+  font-size: 11px; color: var(--text-3); letter-spacing: 0.5px;
+  margin-bottom: var(--s5);
+  opacity: 0; animation: reveal-up 0.65s 0.46s ease forwards;
+}
+.hero-kickers::before,
+.hero-kickers::after {
+  content: ''; flex: 1; height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1));
+}
+.hero-kickers::after {
+  background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.1));
+}
+.hero-btns {
+  display: flex; gap: var(--s2); align-items: center; margin-bottom: var(--s8);
+  opacity: 0; animation: reveal-up 0.65s 0.52s ease forwards;
+}
+
+.hero-stats {
+  display: flex; align-items: center; gap: 0;
+  background: rgba(255, 255, 255, 0.028); border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px; padding: var(--s3) var(--s5);
+  opacity: 0; animation: reveal-up 0.65s 0.7s ease forwards;
+}
+
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── LOGOS BAND ── */
+.logos-band { position: relative; z-index: 1; padding: 0 0 var(--s9); }
+.logos-label {
+  text-align: center; font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--text-4); margin-bottom: var(--s4);
+}
+.ticker-outer {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 14%, black 86%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 14%, black 86%, transparent);
+}
+.ticker-track {
+  display: flex; width: max-content;
+  animation: ticker 32s linear infinite;
+}
+.ticker-track:hover { animation-play-state: paused; }
+.ticker-group {
+  display: flex; gap: 56px; padding-right: 56px; align-items: center;
+}
+.ticker-group span {
+  font-size: 11.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.11); white-space: nowrap; transition: color 0.25s;
+}
+.ticker-group span:hover { color: rgba(255, 255, 255, 0.4); }
+@keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* ── FEATURES BENTO ── */
+.s--features { padding: var(--s10) 0; }
+.bento {
+  display: grid; grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto; gap: 14px;
+}
+.bc {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 20px; padding: var(--s4);
+  position: relative; overflow: hidden;
+  transition: transform 0.35s var(--ease-out), border-color 0.3s, box-shadow 0.3s;
+}
+.bc::after {
+  content: ''; position: absolute; inset: 0; border-radius: 20px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, transparent 55%);
+  opacity: 0; transition: opacity 0.3s; pointer-events: none;
+}
+.bc:hover {
+  transform: translateY(-5px);
+  border-color: rgba(139, 92, 246, 0.25);
+  box-shadow: 0 18px 52px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(139, 92, 246, 0.08);
+}
+.bc:hover::after { opacity: 1; }
+
+.bc--a { grid-column: span 7; }
+.bc--b { grid-column: span 5; }
+.bc--c { grid-column: span 4; }
+.bc--d { grid-column: span 4; }
+.bc--e { grid-column: span 4; }
+
+.bc-icon {
+  width: 42px; height: 42px; border-radius: 11px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; margin-bottom: var(--s3);
+}
+.bc-icon.p { background: rgba(139, 92, 246, 0.13); border: 1px solid rgba(139, 92, 246, 0.22); }
+.bc-icon.g { background: rgba(16, 185, 129, 0.1);  border: 1px solid rgba(16, 185, 129, 0.2); }
+.bc-icon.b { background: rgba(59, 130, 246, 0.1);  border: 1px solid rgba(59, 130, 246, 0.18); }
+.bc-icon.w { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); }
+.bc-title { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: var(--text-1); margin-bottom: var(--s1); line-height: 1.3; }
+.bc-desc  { font-size: 13px; color: var(--text-3); line-height: 1.78; }
+
+.spark { display: flex; align-items: flex-end; gap: 4px; height: 40px; margin-top: var(--s4); }
+.spark span { flex: 1; border-radius: 3px 3px 0 0; background: rgba(139, 92, 246, 0.2); transition: background 0.3s; }
+.bc:hover .spark span { background: rgba(139, 92, 246, 0.45); }
+
+/* ── HOW IT WORKS ── */
+.s--hiw { padding: 0 0 var(--s10); }
+.hiw-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s3); position: relative; }
+.hiw-connector {
+  position: absolute; top: 38px;
+  left: calc(16.66% + 26px); right: calc(16.66% + 26px);
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(139, 92, 246, 0.3) 20%, rgba(139, 92, 246, 0.3) 80%, transparent);
+}
+.hiw-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 20px; padding: var(--s5) var(--s4); text-align: center;
+  transition: border-color 0.25s, transform 0.3s var(--ease-out), background 0.25s;
+}
+.hiw-card:hover { border-color: rgba(139, 92, 246, 0.28); background: rgba(255, 255, 255, 0.038); transform: translateY(-5px); }
+.hiw-num {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.28);
+  color: var(--purple-l);
+  font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto var(--s3); position: relative; z-index: 1;
+  transition: background 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+.hiw-card:hover .hiw-num { background: rgba(139, 92, 246, 0.2); border-color: rgba(139, 92, 246, 0.5); box-shadow: 0 0 24px rgba(139, 92, 246, 0.25); }
+.hiw-title { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: var(--text-1); margin-bottom: var(--s1); }
+.hiw-desc  { font-size: 13px; color: var(--text-3); line-height: 1.78; }
+
+/* ── SOCIAL PROOF ── */
+.s--social { padding: 0 0 var(--s10); }
+.social-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.quote-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 20px; padding: var(--s4);
+  transition: border-color 0.25s, transform 0.3s var(--ease-out);
+}
+.quote-card:hover { border-color: rgba(139, 92, 246, 0.22); transform: translateY(-3px); }
+.quote-card--featured {
+  grid-column: span 2;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(16, 185, 129, 0.06) 60%, rgba(59, 130, 246, 0.08) 100%);
+  border-color: rgba(139, 92, 246, 0.18); padding: var(--s5) var(--s6);
+}
+.q-mark { font-size: 52px; line-height: 0.9; font-family: Georgia, serif; color: rgba(139, 92, 246, 0.22); margin-bottom: var(--s2); display: block; }
+.q-text { font-size: 13.5px; line-height: 1.75; color: var(--text-2); margin-bottom: var(--s3); font-style: italic; }
+.quote-card--featured .q-text { font-size: 14.5px; }
+.q-author { display: flex; align-items: center; gap: var(--s2); }
+.q-avatar {
+  width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+  background: rgba(139, 92, 246, 0.2); border: 1px solid rgba(139, 92, 246, 0.3);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 800; color: var(--purple-l);
+}
+.q-name { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; color: var(--text-1); }
+.q-role { font-size: 11.5px; color: var(--text-3); }
+
+/* ── CTA ── */
+.s--cta { padding: 0 0 var(--s10); }
+</style>

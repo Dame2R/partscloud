@@ -1,0 +1,190 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<nav id="nav">
+  <a href={`${base}/`} class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="9"  cy="9"  r="8" fill="rgba(139,92,246,.22)" stroke="rgba(139,92,246,.55)" stroke-width="1"/>
+        <circle cx="21" cy="21" r="7" fill="rgba(16,185,129,.18)"  stroke="rgba(16,185,129,.48)"  stroke-width="1"/>
+        <circle cx="21" cy="9"  r="5" fill="rgba(59,130,246,.18)"  stroke="rgba(59,130,246,.45)"  stroke-width="1"/>
+      </svg>
+    </div>
+    <span class="nav-logo-text">PartsCloud</span>
+  </a>
+
+  <div class="nav-links">
+    <!-- Lösungen -->
+    <div class="nav-item">
+      <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+        Lösungen
+        <svg class="nav-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2 4 6 8 10 4"/></svg>
+      </button>
+      <div class="nav-dropdown">
+        <div class="nav-dropdown-inner">
+        <a href={`${base}/service-after-sales`} class="dd-item">
+          <div class="dd-icon purple" aria-hidden="true">⬡</div>
+          <div class="dd-text">
+            <strong>Service &amp; After-Sales</strong>
+            <small>Höherer Servicegrad, weniger Fehlteile</small>
+          </div>
+        </a>
+        <a href={`${base}/scm-procurement`} class="dd-item">
+          <div class="dd-icon green" aria-hidden="true">⬢</div>
+          <div class="dd-text">
+            <strong>SCM &amp; Procurement</strong>
+            <small>Bestandsoptimierung, weniger Kapital</small>
+          </div>
+        </a>
+        </div>
+      </div>
+    </div>
+
+    <a href={`${base}/referenzen`} class="nav-link">Referenzen</a>
+
+    <!-- Unternehmen -->
+    <div class="nav-item">
+      <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+        Unternehmen
+        <svg class="nav-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2 4 6 8 10 4"/></svg>
+      </button>
+      <div class="nav-dropdown nav-dropdown--right">
+        <div class="nav-dropdown-inner">
+        <a href={`${base}/ueber-uns`} class="dd-item">
+          <div class="dd-icon purple" aria-hidden="true">◈</div>
+          <div class="dd-text">
+            <strong>Über uns</strong>
+            <small>Team, Mission &amp; Geschichte</small>
+          </div>
+        </a>
+        <a href={`${base}/kontakt`} class="dd-item">
+          <div class="dd-icon green" aria-hidden="true">◇</div>
+          <div class="dd-text">
+            <strong>Kontakt</strong>
+            <small>Sprechen Sie mit unseren Gründern</small>
+          </div>
+        </a>
+        </div>
+      </div>
+    </div>
+
+    <a href={`${base}/ressourcen`} class="nav-link">Ressourcen</a>
+  </div>
+
+  <a href={`${base}/kontakt`} class="nav-cta">Demo anfragen</a>
+</nav>
+
+<style>
+nav {
+  position: fixed; inset: 0 0 auto; z-index: 200; height: 68px;
+  padding: 0 var(--s6);
+  display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 1px solid transparent;
+  transition: background 0.35s ease, border-color 0.35s ease, backdrop-filter 0.35s ease;
+}
+nav.scrolled {
+  background: rgba(7, 7, 15, 0.85);
+  border-color: var(--border);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.nav-logo {
+  display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0;
+}
+.nav-logo-mark { width: 30px; height: 30px; }
+.nav-logo-mark svg { width: 30px; height: 30px; }
+.nav-logo-text {
+  font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800;
+  color: #fff; letter-spacing: 0.4px;
+}
+
+.nav-links {
+  display: flex; align-items: center; gap: 2px;
+  position: absolute; left: 50%; transform: translateX(-50%);
+}
+
+.nav-item { position: relative; }
+
+.nav-link {
+  font-size: 13.5px; font-weight: 500; color: var(--text-2);
+  padding: 7px 14px; border-radius: 8px; cursor: pointer;
+  display: flex; align-items: center; gap: 5px;
+  border: none; background: transparent;
+  font-family: 'Inter', sans-serif; text-decoration: none;
+  transition: color 0.18s, background 0.18s;
+  white-space: nowrap;
+}
+.nav-link:hover,
+.nav-item:hover > .nav-link {
+  color: var(--text-1);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.nav-chevron {
+  width: 12px; height: 12px; opacity: 0.6;
+  transition: transform 0.22s ease;
+}
+.nav-item:hover .nav-chevron { transform: rotate(180deg); }
+
+.nav-dropdown {
+  /* top: 100% flush — padding-top creates the visual gap without breaking hover */
+  position: absolute; top: 100%; left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  padding-top: 8px; /* gap above the visible panel, keeps hover area continuous */
+  min-width: 280px;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  z-index: 10;
+}
+/* visible panel inside the dropdown */
+.nav-dropdown-inner {
+  background: rgba(8, 8, 20, 0.97); border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px; padding: 6px;
+  backdrop-filter: blur(28px); -webkit-backdrop-filter: blur(28px);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+.nav-dropdown--right { left: 0; transform: translateY(-4px); }
+.nav-item:hover .nav-dropdown {
+  opacity: 1; pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+.nav-item:hover .nav-dropdown--right {
+  transform: translateY(0);
+}
+
+.dd-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 12px; border-radius: 10px; text-decoration: none;
+  color: var(--text-2); transition: background 0.14s, color 0.14s;
+}
+.dd-item:hover { background: rgba(139, 92, 246, 0.1); color: #fff; }
+.dd-icon {
+  width: 34px; height: 34px; border-radius: 9px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; font-size: 15px;
+}
+.dd-icon.purple { background: rgba(139, 92, 246, 0.15); border: 1px solid rgba(139, 92, 246, 0.22); }
+.dd-icon.green  { background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.2); }
+.dd-text strong { display: block; font-size: 13px; font-weight: 600; color: rgba(255, 255, 255, 0.88); line-height: 1.3; }
+.dd-text small  { font-size: 11.5px; color: var(--text-3); line-height: 1.4; }
+
+.nav-cta {
+  font-size: 13px; font-weight: 600; padding: 9px 20px; border-radius: 30px;
+  background: var(--purple); color: #fff; text-decoration: none;
+  border: 1px solid rgba(139, 92, 246, 0.45);
+  box-shadow: 0 0 24px rgba(139, 92, 246, 0.28);
+  transition: box-shadow 0.2s, transform 0.15s, background 0.2s;
+  flex-shrink: 0;
+}
+.nav-cta:hover { background: #9d6eff; box-shadow: 0 0 44px rgba(139, 92, 246, 0.5); transform: translateY(-1px); }
+</style>
+
+<script>
+const nav = document.getElementById('nav');
+if (nav) {
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+}
+</script>

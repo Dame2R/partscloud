@@ -50,7 +50,8 @@ Migrate the existing plain-HTML PartsCloud marketing site to Astro with a "Motio
 **Astro 4.x** — static output (`output: 'static'`).
 
 ### GitHub Pages config
-- Check for CNAME file. If present → no base path. If absent → `base: '/partscloud'`
+- No custom domain (no CNAME file) → `base: '/partscloud'` in `astro.config.mjs`
+- All internal links use Astro's `import.meta.env.BASE_URL` prefix
 - Deploy via GitHub Actions workflow: `pnpm build` → `dist/` → Pages
 
 ### Directory structure

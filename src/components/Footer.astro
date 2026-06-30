@@ -1,0 +1,78 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href={`${base}/`} class="f-brand-logo">PartsCloud</a>
+        <p class="f-brand-desc">Das Betriebssystem für Ihr Ersatzteilgeschäft. KI-gestützt, ERP-nativ, sofort einsetzbar.</p>
+      </div>
+      <div>
+        <div class="f-col-title">Lösungen</div>
+        <div class="f-links">
+          <a href={`${base}/service-after-sales`}>Service &amp; After-Sales</a>
+          <a href={`${base}/scm-procurement`}>SCM &amp; Procurement</a>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title">Unternehmen</div>
+        <div class="f-links">
+          <a href={`${base}/ueber-uns`}>Über uns</a>
+          <a href={`${base}/kontakt`}>Kontakt</a>
+          <a href={`${base}/impressum`}>Impressum</a>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title">Kontakt</div>
+        <div class="f-links">
+          <a href="mailto:info@partscloud.de">info@partscloud.de</a>
+          <span>Eichenstraße 20<br />72124 Pliezhausen</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 PartsCloud GmbH</span>
+      <div class="footer-legal">
+        <a href={`${base}/impressum`}>Impressum</a>
+        <a href={`${base}/impressum`}>Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+footer {
+  position: relative; z-index: 1;
+  border-top: 1px solid var(--border);
+  padding: var(--s7) var(--s6) var(--s4);
+}
+.footer-inner { max-width: 1120px; margin: 0 auto; }
+.footer-top {
+  display: grid; grid-template-columns: 2.2fr 1fr 1fr 1fr;
+  gap: var(--s7); margin-bottom: var(--s7);
+}
+.f-brand-logo {
+  font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 800;
+  color: rgba(255, 255, 255, 0.65); text-decoration: none;
+  display: block; margin-bottom: var(--s1);
+}
+.f-brand-desc { font-size: 12.5px; color: var(--text-3); line-height: 1.7; max-width: 220px; }
+.f-col-title {
+  font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--text-3); margin-bottom: var(--s2);
+}
+.f-links { display: flex; flex-direction: column; gap: 10px; }
+.f-links a { font-size: 13px; color: var(--text-3); text-decoration: none; transition: color 0.2s; }
+.f-links a:hover { color: rgba(255, 255, 255, 0.6); }
+.f-links span { font-size: 12.5px; color: var(--text-4); line-height: 1.6; }
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: var(--s3);
+}
+.footer-copy { font-size: 11.5px; color: var(--text-4); }
+.footer-legal { display: flex; gap: var(--s3); }
+.footer-legal a { font-size: 11.5px; color: var(--text-4); text-decoration: none; transition: color 0.2s; }
+.footer-legal a:hover { color: var(--text-3); }
+</style>

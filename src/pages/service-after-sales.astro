@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout
+  title="Service & After-Sales | PartsCloud"
+  description="PartsCloud steigert Ihre Teilverfügbarkeit auf über 98 % und reduziert Fehlteile durch KI-gestützte Bestellvorschläge für Service- und After-Sales-Teams."
+>
+
+  <div class="subhero">
+    <div class="subhero-badge">Für Service &amp; After-Sales Teams</div>
+    <h1 class="subhero-h1">
+      Weniger Fehlteile. <span class="grad">Mehr Service-Umsatz.</span>
+    </h1>
+    <p class="subhero-desc">
+      PartsCloud gibt Ihrem Service-Team datengetriebene Sicherheit, automatisch, wöchentlich,
+      SKU-genau. Schluss mit reaktiver Planung und Excel-Listen.
+    </p>
+    <div class="subhero-btns">
+      <a href={`${base}/kontakt`} class="btn-primary">Demo anfragen</a>
+      <a href={`${base}/scm-procurement`} class="btn-ghost">SCM &amp; Procurement →</a>
+    </div>
+    <div class="stats-band">
+      <div class="stat-item">
+        <div class="stat-val p">98,4 %</div>
+        <div class="stat-lbl">Teilverfügbarkeit</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val g">+18 %</div>
+        <div class="stat-lbl">Service-Umsatz</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val b">−60 %</div>
+        <div class="stat-lbl">Notbestellungen</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section class="s" style="padding: 0 0 var(--s10)">
+    <div class="s-inner">
+      <div class="s-header reveal">
+        <div class="s-eyebrow">Was Sie gewinnen</div>
+        <h2 class="s-title">Designed für Service-Exzellenz</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card reveal" data-delay="1">
+          <div class="fc-icon p" aria-hidden="true">◈</div>
+          <div class="fc-title">Proaktive Verfügbarkeit</div>
+          <div class="fc-desc">Statt auf Fehlteile zu reagieren, wissen Sie vorher, was gebraucht wird. Das Modell analysiert Serviceverträge, Maschinenparks und historische Verbauquoten.</div>
+        </div>
+        <div class="feature-card reveal" data-delay="2">
+          <div class="fc-icon g" aria-hidden="true">⊕</div>
+          <div class="fc-title">Automatische Bestellvorschläge</div>
+          <div class="fc-desc">Wöchentliche, SKU-genaue Empfehlungen direkt aus Ihrem ERP, priorisiert nach Servicerelevanz und Gewinnrisiko. Kein manuelles Aufwand mehr.</div>
+        </div>
+        <div class="feature-card reveal" data-delay="3">
+          <div class="fc-icon b" aria-hidden="true">◎</div>
+          <div class="fc-title">Service-Level-Reporting</div>
+          <div class="fc-desc">Live-Dashboards für Teilverfügbarkeit, Erstlösungsquote und Reaktionszeiten, für jede Region, jeden Techniker, jede Maschinenklasse.</div>
+        </div>
+        <div class="feature-card reveal" data-delay="4">
+          <div class="fc-icon p" aria-hidden="true">◇</div>
+          <div class="fc-title">Notbestellungen reduzieren</div>
+          <div class="fc-desc">Express-Bestellungen kosten 3–5× mehr als geplante Bestellungen. PartsCloud reduziert Notbestellungen um bis zu 60 %, messbar und sofort.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="s" style="padding: 0 0 var(--s10)">
+    <div class="s-inner">
+      <div class="testimonial-wrap reveal">
+        <div class="testimonial-card">
+          <span class="t-mark" aria-hidden="true">"</span>
+          <p class="t-text">Mit PartsCloud haben wir endlich datengetriebene Sicherheit in der Ersatzteilplanung erreicht. Was früher reaktiv und manuell war, ist heute proaktiv, automatisiert und voll unter Kontrolle.</p>
+          <div class="t-author">
+            <div class="t-av" aria-hidden="true">MA</div>
+            <div>
+              <div class="t-name">Michel Ahring</div>
+              <div class="t-role">Head of Division Service · Hymmen GmbH</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="s" style="padding: 0 0 var(--s10)">
+    <div class="s-inner">
+      <div class="cta-card reveal">
+        <div class="cta-eyebrow">Jetzt starten</div>
+        <h2 class="cta-h2">Ihren Service auf das nächste Level heben?</h2>
+        <p class="cta-sub">30 Minuten Demo. Sie sehen, was möglich ist.</p>
+        <div class="cta-btns">
+          <a href={`${base}/kontakt`} class="btn-primary">Demo anfragen</a>
+          <a href={`${base}/scm-procurement`} class="btn-ghost">SCM &amp; Procurement →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>

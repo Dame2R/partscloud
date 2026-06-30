@@ -1,0 +1,93 @@
+<h2>Navbar-Struktur — was stimmt?</h2>
+<p class="subtitle">Links: aktuelle Navbar. Rechts: was partscloud.com wahrscheinlich hat (aus HTML-Analyse). Sag mir was falsch oder fehlt.</p>
+
+<div class="split">
+
+  <div class="mockup">
+    <div class="mockup-header">Aktuell (unsere Seite)</div>
+    <div class="mockup-body" style="background:#07070f;padding:16px 20px">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 16px;background:rgba(255,255,255,.04);border-radius:8px;border:1px solid rgba(255,255,255,.07)">
+        <span style="color:#fff;font-weight:800;font-size:10px;letter-spacing:2px;font-family:sans-serif">PARTSCLOUD</span>
+        <div style="display:flex;gap:14px;align-items:center">
+          <span style="color:rgba(255,255,255,.4);font-size:9px">Produkt</span>
+          <span style="color:rgba(255,255,255,.4);font-size:9px">Lösungen ▾</span>
+          <span style="color:rgba(255,255,255,.25);font-size:9px;text-decoration:line-through">Preise</span>
+          <span style="color:rgba(255,255,255,.25);font-size:9px;text-decoration:line-through">Blog</span>
+          <span style="color:rgba(255,255,255,.25);font-size:9px;text-decoration:line-through">Über uns</span>
+          <span style="color:rgba(255,255,255,.4);font-size:9px">Impressum</span>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.45);font-size:9px;padding:4px 10px;border-radius:6px">Ansprechpartner</span>
+          <span style="background:#8b5cf6;color:#fff;font-size:9px;padding:4px 10px;border-radius:6px">Demo anfragen →</span>
+        </div>
+      </div>
+      <div style="margin-top:12px;padding:8px;background:rgba(255,68,68,.05);border:1px solid rgba(255,68,68,.15);border-radius:6px">
+        <p style="color:rgba(255,120,120,.7);font-size:9px;margin:0">⚠ Probleme: zu viele durchgestrichene "Fake"-Links sichtbar, Impressum deplatziert, kein Logo-Icon, Struktur zu simpel</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-header">partscloud.com (Analyse)</div>
+    <div class="mockup-body" style="background:#07070f;padding:16px 20px">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.0)">
+        <!-- Logo with icon -->
+        <div style="display:flex;align-items:center;gap:8px">
+          <div style="width:22px;height:22px;position:relative">
+            <div style="position:absolute;top:0;right:0;width:10px;height:10px;background:#8b5cf6;border-radius:2px;opacity:.9"></div>
+            <div style="position:absolute;bottom:0;left:0;width:14px;height:14px;background:#8b5cf6;border-radius:2px;opacity:.5"></div>
+          </div>
+          <span style="color:#fff;font-weight:800;font-size:10px;letter-spacing:1px;font-family:sans-serif">PartsCloud</span>
+        </div>
+        <!-- Nav links -->
+        <div style="display:flex;gap:18px;align-items:center">
+          <span style="color:rgba(255,255,255,.55);font-size:9px">Produkt</span>
+          <span style="color:rgba(255,255,255,.55);font-size:9px">Lösungen ▾</span>
+          <span style="color:rgba(255,255,255,.55);font-size:9px">Kunden</span>
+          <span style="color:rgba(255,255,255,.55);font-size:9px">Über uns</span>
+        </div>
+        <!-- Right: lang + CTA -->
+        <div style="display:flex;gap:10px;align-items:center">
+          <div style="display:flex;gap:2px;background:rgba(255,255,255,.05);border-radius:5px;padding:2px">
+            <span style="color:#fff;font-size:8px;font-weight:700;padding:2px 6px;background:rgba(139,92,246,.3);border-radius:3px">DE</span>
+            <span style="color:rgba(255,255,255,.3);font-size:8px;padding:2px 6px">EN</span>
+          </div>
+          <span style="background:#8b5cf6;color:#fff;font-size:9px;padding:5px 12px;border-radius:20px;font-weight:600">Demo anfragen</span>
+        </div>
+      </div>
+      <div style="margin-top:12px;padding:8px;background:rgba(16,185,129,.05);border:1px solid rgba(16,185,129,.15);border-radius:6px">
+        <p style="color:rgba(60,220,140,.7);font-size:9px;margin:0">✓ Sauberer: Logo-Icon + Text, nur echte Links, kein Impressum in Nav, DE/EN Toggle, pill-CTA</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div style="margin-top:28px">
+  <h3>Frage: Was stimmt nicht an meiner Rekonstruktion von partscloud.com?</h3>
+  <p class="subtitle">Falls die Original-Nav anders ist, sag mir hier was fehlt oder falsch ist — z.B. andere Links, kein Language-Toggle, anderes Logo etc.</p>
+
+  <div class="options" style="margin-top:16px">
+    <div class="option" data-choice="correct" onclick="toggleSelect(this)">
+      <div class="letter">✓</div>
+      <div class="content">
+        <h3>Sieht richtig aus</h3>
+        <p>Die rechte Seite entspricht ungefähr dem Original</p>
+      </div>
+    </div>
+    <div class="option" data-choice="no-lang" onclick="toggleSelect(this)">
+      <div class="letter">A</div>
+      <div class="content">
+        <h3>Kein Language-Toggle nötig</h3>
+        <p>Wir wollen keine DE/EN-Umschaltung auf der Studienarbeit-Seite</p>
+      </div>
+    </div>
+    <div class="option" data-choice="different" onclick="toggleSelect(this)">
+      <div class="letter">B</div>
+      <div class="content">
+        <h3>Struktur ist anders</h3>
+        <p>Ich erkläre unten in der Antwort was das Original wirklich hat</p>
+      </div>
+    </div>
+  </div>
+</div>

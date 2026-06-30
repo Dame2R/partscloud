@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout
+  title="SCM & Procurement | PartsCloud"
+  description="PartsCloud optimiert Ihren Ersatzteilbestand durch KI-gestützte Bestandsplanung: weniger gebundenes Kapital, bessere Lieferantensteuerung für SCM- und Procurement-Teams."
+>
+
+  <div class="subhero">
+    <div class="subhero-badge">Für SCM &amp; Procurement Teams</div>
+    <h1 class="subhero-h1">
+      Weniger Kapital. <span class="grad" style="--grad-start:#34d399;--grad-end:#60a5fa">Bessere Beschaffung.</span>
+    </h1>
+    <p class="subhero-desc">
+      PartsCloud optimiert Ihren Ersatzteilbestand automatisch, auf Basis echter Nachfragedaten,
+      Lieferzeiten und Serviceverträge. Weniger Überbestand, weniger Fehlteile.
+    </p>
+    <div class="subhero-btns">
+      <a href={`${base}/kontakt`} class="btn-primary">Demo anfragen</a>
+      <a href={`${base}/service-after-sales`} class="btn-ghost">Service &amp; After-Sales →</a>
+    </div>
+    <div class="stats-band">
+      <div class="stat-item">
+        <div class="stat-val g">−23 %</div>
+        <div class="stat-lbl">Gebundenes Kapital</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val b">91 %</div>
+        <div class="stat-lbl">Forecast-Genauigkeit</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val p">20+</div>
+        <div class="stat-lbl">ERP-Integrationen</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section class="s" style="padding: 0 0 var(--s10)">
+    <div class="s-inner">
+      <div class="s-header reveal">
+        <div class="s-eyebrow">Was Sie gewinnen</div>
+        <h2 class="s-title">Designed für smarte Beschaffung</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card reveal" data-delay="1">
+          <div class="fc-icon g" aria-hidden="true">▲</div>
+          <div class="fc-title">Bestandsoptimierung</div>
+          <div class="fc-desc">KI-gestützte Sicherheitsbestands- und Nachbestellpunktberechnung, je SKU, je Standort. Kein Excel, kein Bauchgefühl.</div>
+        </div>
+        <div class="feature-card reveal" data-delay="2">
+          <div class="fc-icon b" aria-hidden="true">⊕</div>
+          <div class="fc-title">Lieferantensteuerung</div>
+          <div class="fc-desc">Automatisch generierte Bestellvorschläge mit Lieferantenzuordnung, Mindestmengen und Konditionsberücksichtigung, direkt in Ihr ERP.</div>
+        </div>
+        <div class="feature-card reveal" data-delay="3">
+          <div class="fc-icon p" aria-hidden="true">◈</div>
+          <div class="fc-title">Kapitalfreisetzung</div>
+          <div class="fc-desc">Durchschnittlich 23 % weniger gebundenes Kapital, durch intelligente Klassifizierung von Langsamdrehern, Obsoleszenz-Risiken und Überbeständen.</div>
+        </div>
+        <div class="feature-card reveal" data-delay="4">
+          <div class="fc-icon g" aria-hidden="true">◎</div>
+          <div class="fc-title">Demand Sensing</div>
+          <div class="fc-desc">91 % Forecast-Genauigkeit durch Einbezug von Serviceverträgen, Maschinenparkalter und externen Signalen, weit besser als reine Vergangenheitsanalyse.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="s" style="padding: 0 0 var(--s10)">
+    <div class="s-inner">
+      <div class="testimonial-wrap reveal">
+        <div class="testimonial-card">
+          <span class="t-mark" aria-hidden="true">"</span>
+          <p class="t-text">Wir haben mit PartsCloud innerhalb von drei Monaten unseren Lagerbestand um 21 % reduziert, ohne die Teilverfügbarkeit zu verschlechtern. Das hätten wir mit klassischen Planungstools nie erreicht.</p>
+          <div class="t-author">
+            <div class="t-av" aria-hidden="true">TK</div>
+            <div>
+              <div class="t-name">Thomas Klein</div>
+              <div class="t-role">Head of Procurement · Weinig AG</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="s" style="padding: 0 0 var(--s10)">
+    <div class="s-inner">
+      <div class="cta-card reveal">
+        <div class="cta-eyebrow">Jetzt starten</div>
+        <h2 class="cta-h2">Kapital freisetzen ohne Servicerisiko?</h2>
+        <p class="cta-sub">30 Minuten Demo. Sie sehen konkrete Einsparpotenziale für Ihr Sortiment.</p>
+        <div class="cta-btns">
+          <a href={`${base}/kontakt`} class="btn-primary">Demo anfragen</a>
+          <a href={`${base}/service-after-sales`} class="btn-ghost">Service &amp; After-Sales →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
