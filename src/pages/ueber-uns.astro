@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout
+  title="Über uns — PartsCloud"
+  description="Lernen Sie das Team hinter PartsCloud kennen — gegründet von Benjamin Reichenecker und Fabian Gemmecke mit der Mission, Ersatzteilplanung zu transformieren."
+>
+
+  <div class="subhero">
+    <div class="subhero-badge">Unser Team</div>
+    <h1 class="subhero-h1">
+      Gegründet von<br />
+      <span class="grad">Praktikern für Praktiker.</span>
+    </h1>
+    <p class="subhero-desc">
+      PartsCloud entstand aus der Frustration über reaktive Ersatzteilplanung, manuelle Excel-Listen
+      und unnötige Fehlteile. Wir haben eine bessere Lösung gebaut.
+    </p>
+  </div>
+
+  <!-- MISSION -->
+  <section class="s" style="padding: 0 0 var(--s10)">
+    <div class="s-inner">
+      <div class="mission-block reveal">
+        <div class="s-eyebrow">Unsere Mission</div>
+        <h2 class="s-title" style="text-align:left;margin:var(--s2) 0 var(--s4)">
+          Ersatzteilplanung so einfach machen, wie sie sein sollte.
+        </h2>
+        <p class="mission-text">
+          Maschinenbauer verlieren jährlich Milliarden durch Fehlteile, Überbestand und
+          reaktive Planung. Wir glauben, dass das nicht so sein muss. Mit KI, nativer
+          ERP-Integration und branchenspezifischen Modellen bringen wir Präzision in einen
+          Bereich, der bisher von Bauchgefühl und Excel dominiert wurde.
+        </p>
+        <p class="mission-text">
+          PartsCloud ist in Pliezhausen bei Stuttgart beheimatet — nah an unseren Kunden
+          aus dem deutschen Maschinenbau. Wir sind bootstrapped, kundenfokussiert und
+          bewusst schlank aufgestellt.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="s" style="padding: 0 0 var(--s10)">
+    <div class="s-inner">
+      <div class="s-header reveal">
+        <div class="s-eyebrow">Die Gründer</div>
+        <h2 class="s-title">Lernen Sie uns kennen</h2>
+      </div>
+      <div class="team-grid">
+        <div class="team-card reveal" data-delay="1">
+          <div class="team-avatar" aria-hidden="true">BR</div>
+          <div class="team-name">Benjamin Reichenecker</div>
+          <div class="team-role">Co-Founder &amp; CEO</div>
+          <a href="mailto:benjamin@partscloud.de" class="team-email">benjamin@partscloud.de</a>
+        </div>
+        <div class="team-card reveal" data-delay="2">
+          <div class="team-avatar" aria-hidden="true">FG</div>
+          <div class="team-name">Fabian Gemmecke</div>
+          <div class="team-role">Co-Founder &amp; CTO</div>
+          <a href="mailto:fabian@partscloud.de" class="team-email">fabian@partscloud.de</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="s" style="padding: 0 0 var(--s10)">
+    <div class="s-inner">
+      <div class="cta-card reveal">
+        <div class="cta-eyebrow">Kontakt aufnehmen</div>
+        <h2 class="cta-h2">Sprechen Sie direkt mit den Gründern.</h2>
+        <p class="cta-sub">Kein Sales-Team, kein Skript. Ehrliches Gespräch auf Augenhöhe.</p>
+        <div class="cta-btns">
+          <a href={`${base}/kontakt`} class="btn-primary">Kontakt aufnehmen</a>
+          <a href={`${base}/`} class="btn-ghost">Zurück zur Startseite →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.mission-block { max-width: 720px; }
+.mission-text {
+  font-size: 15.5px; line-height: 1.8; color: var(--text-2); margin-bottom: var(--s3);
+}
+</style>

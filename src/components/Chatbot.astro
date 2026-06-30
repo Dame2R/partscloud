@@ -1,0 +1,212 @@
+---
+// Chatbot — included on every page via Layout.astro
+---
+
+<div class="chat-widget">
+  <button class="chat-fab" id="chatFab" aria-label="Chat öffnen">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+    <span class="chat-badge" id="chatBadge" aria-label="1 neue Nachricht">1</span>
+  </button>
+
+  <div class="chat-panel" id="chatPanel" hidden role="dialog" aria-label="PartsCloud Chat">
+    <div class="chat-head">
+      <div class="chat-av" aria-hidden="true">PC</div>
+      <div class="chat-meta">
+        <div class="chat-name">PartsCloud</div>
+        <div class="chat-status">
+          <span class="chat-dot" aria-hidden="true"></span>
+          Bereit für dein Anliegen
+        </div>
+      </div>
+      <button class="chat-close" id="chatClose" aria-label="Chat schließen">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="1" y1="1" x2="11" y2="11"/>
+          <line x1="11" y1="1" x2="1" y2="11"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="chat-msgs" id="chatMsgs" aria-live="polite">
+      <div class="chat-msg">👋 Hallo! Wie kann ich Ihnen helfen?</div>
+    </div>
+
+    <div class="chat-pills">
+      <button class="chat-pill">Was ist PartsCloud?</button>
+      <button class="chat-pill">Integration?</button>
+      <button class="chat-pill">Demo anfragen</button>
+      <button class="chat-pill">Kontakt</button>
+    </div>
+
+    <div class="chat-input-row">
+      <input class="chat-input" id="chatInput" type="text" placeholder="Nachricht schreiben..." aria-label="Nachricht" />
+      <button class="chat-send" id="chatSend" aria-label="Senden">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+          <line x1="22" y1="2" x2="11" y2="13"/>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+.chat-widget { position: fixed; bottom: var(--s4); right: var(--s4); z-index: 500; }
+
+.chat-fab {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--purple); border: none; cursor: pointer;
+  color: #fff; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 28px rgba(139, 92, 246, 0.48);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+.chat-fab:hover { transform: scale(1.08); box-shadow: 0 12px 40px rgba(139, 92, 246, 0.6); }
+
+.chat-badge {
+  position: absolute; top: -2px; right: -2px;
+  width: 17px; height: 17px; border-radius: 50%;
+  background: #ef4444; color: #fff;
+  font-size: 9px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.chat-panel {
+  position: absolute; bottom: 64px; right: 0; width: 340px;
+  background: rgba(8, 8, 22, 0.97); border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px; box-shadow: 0 24px 64px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+}
+.chat-panel[hidden] { display: none !important; }
+
+.chat-head {
+  background: linear-gradient(120deg, #8b5cf6, #7c3aed);
+  padding: 14px 16px; display: flex; align-items: center; gap: 10px;
+}
+.chat-av {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18); flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 800; color: #fff;
+}
+.chat-name { font-size: 13.5px; font-weight: 700; color: #fff; }
+.chat-status {
+  font-size: 11px; color: rgba(255, 255, 255, 0.6);
+  display: flex; align-items: center; gap: 4px; margin-top: 2px;
+}
+.chat-dot {
+  width: 6px; height: 6px; border-radius: 50%; background: #4ade80;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+.chat-close {
+  margin-left: auto; background: rgba(255, 255, 255, 0.12);
+  border: none; width: 26px; height: 26px; border-radius: 6px;
+  cursor: pointer; color: rgba(255, 255, 255, 0.65);
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s, color 0.15s;
+}
+.chat-close:hover { background: rgba(255, 255, 255, 0.22); color: #fff; }
+
+.chat-msgs {
+  padding: 14px; display: flex; flex-direction: column; gap: 8px;
+  max-height: 200px; overflow-y: auto;
+}
+.chat-msg {
+  padding: 9px 13px; border-radius: 12px; border-bottom-left-radius: 3px;
+  font-size: 13px; line-height: 1.55; max-width: 90%;
+  background: rgba(255, 255, 255, 0.07); color: rgba(255, 255, 255, 0.8);
+}
+.chat-msg.user {
+  align-self: flex-end;
+  background: rgba(139, 92, 246, 0.22);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 3px;
+}
+
+.chat-pills {
+  display: flex; flex-wrap: wrap; gap: 6px; padding: 0 10px 10px;
+}
+.chat-pill {
+  font-size: 11.5px; font-weight: 500; padding: 5px 11px; border-radius: 20px;
+  background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.22);
+  color: rgba(255, 255, 255, 0.6); cursor: pointer; font-family: 'Inter', sans-serif;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.chat-pill:hover { background: rgba(139, 92, 246, 0.2); color: #fff; border-color: rgba(139, 92, 246, 0.4); }
+
+.chat-input-row {
+  display: flex; gap: 8px; padding: 10px 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.chat-input {
+  flex: 1; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 10px; padding: 8px 12px;
+  color: rgba(255, 255, 255, 0.85); font-size: 13px; font-family: 'Inter', sans-serif;
+  outline: none; transition: border-color 0.2s;
+}
+.chat-input:focus { border-color: rgba(139, 92, 246, 0.4); }
+.chat-send {
+  width: 32px; height: 32px; flex-shrink: 0; border-radius: 8px;
+  background: var(--purple); border: none; cursor: pointer; color: #fff;
+  display: flex; align-items: center; justify-content: center; transition: background 0.15s;
+}
+.chat-send:hover { background: #9d6eff; }
+</style>
+
+<script>
+const fab    = document.getElementById('chatFab');
+const panel  = document.getElementById('chatPanel');
+const badge  = document.getElementById('chatBadge');
+const closeB = document.getElementById('chatClose');
+const input  = document.getElementById('chatInput');
+const msgs   = document.getElementById('chatMsgs');
+
+const RESPONSES: Record<string, string> = {
+  'was ist partscloud':   'PartsCloud ist das KI-gestützte Betriebssystem für Ersatzteilplanung — nativ in Ihr ERP integriert.',
+  'integration':          'Wir integrieren uns nativ in SAP, Microsoft Dynamics, proALPHA und 20+ weitere ERP-Systeme.',
+  'demo':                 'Super! Schreiben Sie uns einfach an info@partscloud.de oder nutzen Sie das Kontaktformular.',
+  'kontakt':              'Erreichen Sie uns unter info@partscloud.de oder über unsere Kontaktseite.',
+  'preis':                'Die Preise richten sich nach der Anzahl der SKUs. Am besten kurzes Demo-Gespräch vereinbaren!',
+  'default':              'Vielen Dank für Ihre Nachricht! Wir melden uns schnellstmöglich. Oder schreiben Sie uns direkt: info@partscloud.de',
+};
+
+function addMsg(text: string, isUser = false) {
+  const m = document.createElement('div');
+  m.className = 'chat-msg' + (isUser ? ' user' : '');
+  m.textContent = text;
+  msgs?.appendChild(m);
+  if (msgs) msgs.scrollTop = msgs.scrollHeight;
+}
+
+function botReply(userText: string) {
+  const key = Object.keys(RESPONSES).find(k => userText.toLowerCase().includes(k));
+  setTimeout(() => addMsg(RESPONSES[key ?? 'default']), 600);
+}
+
+fab?.addEventListener('click', () => {
+  if (panel) panel.hidden = !panel.hidden;
+  if (badge) badge.style.display = 'none';
+});
+closeB?.addEventListener('click', () => { if (panel) panel.hidden = true; });
+
+document.querySelectorAll('.chat-pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    const t = (pill as HTMLButtonElement).textContent ?? '';
+    addMsg(t, true);
+    botReply(t);
+  });
+});
+
+function send() {
+  const val = (input as HTMLInputElement)?.value.trim();
+  if (!val) return;
+  addMsg(val, true);
+  botReply(val);
+  (input as HTMLInputElement).value = '';
+}
+document.getElementById('chatSend')?.addEventListener('click', send);
+input?.addEventListener('keydown', (e: KeyboardEvent) => { if (e.key === 'Enter') send(); });
+</script>
